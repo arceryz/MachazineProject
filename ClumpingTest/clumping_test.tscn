@@ -12,39 +12,77 @@ offset_top = 79.0
 offset_right = 451.0
 offset_bottom = 479.0
 border_color = Color(0.310516, 0.599724, 1, 1)
-editor_only = false
 
-[node name="RandomizeButton" type="Button" parent="PointRect"]
-unique_name_in_owner = true
-offset_left = 419.0
-offset_top = -2.0
-offset_right = 538.0
-offset_bottom = 31.0
-text = "Randomize"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="PointRect"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PointRect"]
 layout_mode = 0
-offset_left = 419.0
-offset_top = 40.0
-offset_right = 622.0
-offset_bottom = 80.0
+offset_left = 414.0
+offset_right = 725.0
+offset_bottom = 130.0
 
-[node name="CountSlider" type="HSlider" parent="PointRect/HBoxContainer"]
+[node name="RandomizeButton" type="Button" parent="PointRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Randomize"
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PointRect/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="CountSlider" type="HSlider" parent="PointRect/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 min_value = 1.0
-max_value = 200.0
+max_value = 1000.0
 value = 20.0
+metadata/_edit_lock_ = true
 
-[node name="CountLabel" type="Label" parent="PointRect/HBoxContainer"]
+[node name="CountLabel" type="Label" parent="PointRect/VBoxContainer/HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(50, 0)
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 1
 text = "100 Points"
 vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PointRect/VBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="GroupSlider" type="HSlider" parent="PointRect/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 50.0
+value = 10.0
+metadata/_edit_lock_ = true
+
+[node name="GroupLabel" type="Label" parent="PointRect/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 1
+text = "100 Points"
+vertical_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="QuantityLabel" type="Label" parent="PointRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "30 Clumps"
+
+[node name="AverageLabel" type="Label" parent="PointRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "4.7 Average per Clump"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 16.0
